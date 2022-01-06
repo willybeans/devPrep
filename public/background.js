@@ -69,8 +69,14 @@ chrome.runtime.onInstalled.addListener(() => {
 	});
 
 	chrome.contextMenus.create({
-		id: 'createprepcard',
-		title: 'Create PrepCard with Selected Text!: %s',
+		id: 'backofprepcard',
+		title: 'Use "%s" as back of PrepCard',
+		contexts: ['selection'],
+	});
+
+	chrome.contextMenus.create({
+		id: 'frontofprepcard',
+		title: 'Use "%s" as front of PrepCard',
 		contexts: ['selection'],
 	});
 
